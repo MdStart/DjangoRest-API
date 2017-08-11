@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<div class="row">
+		<div class="col-sm-6 col-sm-offset-3">
+			<br>
+			<h3 style="text-align: center;">Add a Test Suit</h3>
+			<hr>
+			<form action="" method="post">
+				{% csrf_token %}
+			    {{ form.as_p }}
+			    <input type="submit" value="Add TestSuit" class="btn btn-primary">
+			</form>
+		</div>
+	</div>
+{% endblock %}

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20170717 14:58:02.622" generator="Robot 3.0.2 (Python 2.7.12 on linux2)">
+<suite source="/home/nexii/NUTAS/UI/USAS/media/comptel_W2hBAjs.txt" id="s1" name="comptel W2hBAjs">
+<test id="s1-t1" name="TestCase1">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>http://www.comptel.com/</arg>
+<arg>ff</arg>
+</arguments>
+<msg timestamp="20170717 14:58:02.733" level="INFO">Opening browser 'ff' to base url 'http://www.comptel.com/'</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20170717 14:58:03.823" level="FAIL">No browser is open</msg>
+<status status="FAIL" endtime="20170717 14:58:03.823" starttime="20170717 14:58:03.821"></status>
+</kw>
+<msg timestamp="20170717 14:58:03.823" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
+<msg timestamp="20170717 14:58:03.824" level="FAIL">WebDriverException: Message: Unable to find a matching set of capabilities
+</msg>
+<status status="FAIL" endtime="20170717 14:58:03.824" starttime="20170717 14:58:02.732"></status>
+</kw>
+<status status="FAIL" endtime="20170717 14:58:03.825" critical="yes" starttime="20170717 14:58:02.732">WebDriverException: Message: Unable to find a matching set of capabilities
+</status>
+</test>
+<test id="s1-t2" name="TestCase2">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>http://www.comptel.com/</arg>
+<arg>ff</arg>
+</arguments>
+<msg timestamp="20170717 14:58:03.827" level="INFO">Opening browser 'ff' to base url 'http://www.comptel.com/'</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20170717 14:58:04.903" level="FAIL">No browser is open</msg>
+<status status="FAIL" endtime="20170717 14:58:04.903" starttime="20170717 14:58:04.901"></status>
+</kw>
+<msg timestamp="20170717 14:58:04.903" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
+<msg timestamp="20170717 14:58:04.904" level="FAIL">WebDriverException: Message: Unable to find a matching set of capabilities
+</msg>
+<status status="FAIL" endtime="20170717 14:58:04.904" starttime="20170717 14:58:03.827"></status>
+</kw>
+<status status="FAIL" endtime="20170717 14:58:04.905" critical="yes" starttime="20170717 14:58:03.826">WebDriverException: Message: Unable to find a matching set of capabilities
+</status>
+</test>
+<status status="FAIL" endtime="20170717 14:58:04.906" starttime="20170717 14:58:02.624"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="2" pass="0">Critical Tests</stat>
+<stat fail="2" pass="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="2" id="s1" name="comptel W2hBAjs" pass="0">comptel W2hBAjs</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20170717 14:58:03.823" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
+<msg timestamp="20170717 14:58:04.903" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
+</errors>
+</robot>

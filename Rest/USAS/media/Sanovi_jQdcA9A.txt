@@ -1,0 +1,15 @@
+*** Settings ***
+Library  Selenium2Library
+
+
+*** Test Cases ***
+TestCase1
+    Open Browser    http://www.sanovi.com/    ff
+    Close Browser
+
+TestCase2
+    Open Browser    http://www.sanovi.com/    ff
+
+
+TestCase3
+    Open Browser    http://www.nexiilabs.com/    ff

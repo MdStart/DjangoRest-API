@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20170718 11:53:03.959" generator="Robot 3.0.2 (Python 2.7.12 on linux2)">
+<suite source="/home/nexii/NUTAS/UI/USAS/media/comptel_iZXPIh3.robot" id="s1" name="comptel iZXPIh3">
+<test id="s1-t1" name="TestCase1">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>http://www.comptel.com/</arg>
+<arg>ff</arg>
+</arguments>
+<msg timestamp="20170718 11:53:04.067" level="INFO">Opening browser 'ff' to base url 'http://www.comptel.com/'</msg>
+<status status="PASS" endtime="20170718 11:53:17.695" starttime="20170718 11:53:04.067"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170718 11:53:18.119" starttime="20170718 11:53:17.695"></status>
+</kw>
+<status status="PASS" endtime="20170718 11:53:18.120" critical="yes" starttime="20170718 11:53:04.066"></status>
+</test>
+<test id="s1-t2" name="TestCase2">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>http://www.comptel.com/</arg>
+<arg>ff</arg>
+</arguments>
+<msg timestamp="20170718 11:53:18.122" level="INFO">Opening browser 'ff' to base url 'http://www.comptel.com/'</msg>
+<status status="PASS" endtime="20170718 11:53:29.135" starttime="20170718 11:53:18.122"></status>
+</kw>
+<status status="PASS" endtime="20170718 11:53:29.136" critical="yes" starttime="20170718 11:53:18.121"></status>
+</test>
+<status status="PASS" endtime="20170718 11:53:29.137" starttime="20170718 11:53:03.961"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="2">Critical Tests</stat>
+<stat fail="0" pass="2">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="comptel iZXPIh3" pass="2">comptel iZXPIh3</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

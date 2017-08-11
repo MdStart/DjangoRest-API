@@ -1,0 +1,14 @@
+*** Settings ***
+Library           OperatingSystem
+Library           Remote    http://52.76.40.136:8270
+
+*** Test Cases ***
+User can create an account and log in
+    ${result}=    Remote.get_public_dns_name    i-15948e9b
+    Log    'Wroking,Fine!'
+    Log    ${result}
+
+*** Keywords ***
+Get All Instances
+    Remote.get_all_instances
+     

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20170720 10:55:03.032" generator="Robot 3.0.2 (Python 2.7.12 on linux2)">
+<suite source="/home/nexii/NUTAS/UI/USAS/media/Sanovi_jQdcA9A.txt" id="s1" name="Sanovi jQdcA9A">
+<test id="s1-t1" name="TestCase1">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>http://www.sanovi.com/</arg>
+<arg>ff</arg>
+</arguments>
+<msg timestamp="20170720 10:55:03.144" level="INFO">Opening browser 'ff' to base url 'http://www.sanovi.com/'</msg>
+<status status="PASS" endtime="20170720 10:55:15.477" starttime="20170720 10:55:03.144"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170720 10:55:15.903" starttime="20170720 10:55:15.477"></status>
+</kw>
+<status status="PASS" endtime="20170720 10:55:15.903" critical="yes" starttime="20170720 10:55:03.143"></status>
+</test>
+<test id="s1-t2" name="TestCase2">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>http://www.sanovi.com/</arg>
+<arg>ff</arg>
+</arguments>
+<msg timestamp="20170720 10:55:15.905" level="INFO">Opening browser 'ff' to base url 'http://www.sanovi.com/'</msg>
+<status status="PASS" endtime="20170720 10:55:27.776" starttime="20170720 10:55:15.904"></status>
+</kw>
+<status status="PASS" endtime="20170720 10:55:27.777" critical="yes" starttime="20170720 10:55:15.904"></status>
+</test>
+<test id="s1-t3" name="TestCase3">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>http://www.nexiilabs.com/</arg>
+<arg>ff</arg>
+</arguments>
+<msg timestamp="20170720 10:55:27.780" level="INFO">Opening browser 'ff' to base url 'http://www.nexiilabs.com/'</msg>
+<status status="PASS" endtime="20170720 10:55:39.297" starttime="20170720 10:55:27.779"></status>
+</kw>
+<status status="PASS" endtime="20170720 10:55:39.297" critical="yes" starttime="20170720 10:55:27.778"></status>
+</test>
+<status status="PASS" endtime="20170720 10:55:39.303" starttime="20170720 10:55:03.034"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="3">Critical Tests</stat>
+<stat fail="0" pass="3">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Sanovi jQdcA9A" pass="3">Sanovi jQdcA9A</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

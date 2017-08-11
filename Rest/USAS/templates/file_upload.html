@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+<div class="container">
+<div class="col-sm-6 col-sm-offset-3">
+  <form method="post" enctype="multipart/form-data" >
+    {% csrf_token %}
+     <h2 class="form-signin-heading">Browse A Robot File</h2>
+     <label  class="sr-only">Choose File</label>
+    <input type="file" name="myfile" id="FileUpload1"><br>
+   
+    <button type="submit" class=" btn btn-primary ">Upload</button>
+  </form>
+
+  {% if uploaded_file_url %}
+    <p>File uploaded at: <a href="{{ uploaded_file_url }}">{{ uploaded_file_url }}</a></p>
+
+  {% endif %}
+</div>
+</div>
+<script>
+	//function for check attachment size and extention match
+	$('#FileUpload1').change(
+                function () {
+                    var fileExtension = ['py','txt','robot'];
+                    if ($.inArray($(this).val().split('.').pop().toLowerCase(), fileExtension) == -1) {
+                        alert("Only '.py' format is allowed.");
+                        this.value = ''; // Clean field
+                        return false;
+                    }
+                });
+	</script>
+{% endblock %}
+

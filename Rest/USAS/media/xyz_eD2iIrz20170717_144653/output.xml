@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20170717 14:46:54.459" generator="Robot 3.0.2 (Python 2.7.12 on linux2)">
+<suite source="/home/nexii/NUTAS/UI/USAS/media/xyz_eD2iIrz.txt" id="s1" name="xyz eD2iIrz">
+<test id="s1-t1" name="User can create an account and log in">
+<kw name="Remote.get_public_dns_name">
+<arguments>
+<arg>i-15948e9b</arg>
+</arguments>
+<assign>
+<var>${result}=</var>
+</assign>
+<msg timestamp="20170717 14:46:55.605" level="FAIL">No keyword with name 'Remote.get_public_dns_name' found.</msg>
+<status status="FAIL" endtime="20170717 14:46:55.605" starttime="20170717 14:46:55.605"></status>
+</kw>
+<status status="FAIL" endtime="20170717 14:46:55.606" critical="yes" starttime="20170717 14:46:55.597">No keyword with name 'Remote.get_public_dns_name' found.</status>
+</test>
+<status status="FAIL" endtime="20170717 14:46:55.606" starttime="20170717 14:46:54.460"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="xyz eD2iIrz" pass="0">xyz eD2iIrz</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20170717 14:46:55.596" level="ERROR">Error in file '/home/nexii/NUTAS/UI/USAS/media/xyz_eD2iIrz.txt': Getting keyword names from library 'Remote' failed: Calling dynamic method 'get_keyword_names' failed: Connecting remote server at http://52.76.40.136:8270 failed: [Errno 111] Connection refused</msg>
+</errors>
+</robot>

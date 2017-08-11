@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20170719 06:21:04.357" generator="Robot 3.0.2 (Python 2.7.12 on linux2)">
+<suite source="/home/nexii/NUTAS/UI/USAS/media/DXC1.txt" id="s1" name="DXC1">
+<test id="s1-t1" name="TestCase1">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>https://www.dxc.technology/</arg>
+<arg>ff</arg>
+</arguments>
+<msg timestamp="20170719 06:21:04.695" level="INFO">Opening browser 'ff' to base url 'https://www.dxc.technology/'</msg>
+<status status="PASS" endtime="20170719 06:21:23.956" starttime="20170719 06:21:04.695"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170719 06:21:24.398" starttime="20170719 06:21:23.957"></status>
+</kw>
+<status status="PASS" endtime="20170719 06:21:24.398" critical="yes" starttime="20170719 06:21:04.693"></status>
+</test>
+<test id="s1-t2" name="TestCase2">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>https://www.dxc.technology/</arg>
+<arg>ff</arg>
+</arguments>
+<msg timestamp="20170719 06:21:24.401" level="INFO">Opening browser 'ff' to base url 'https://www.dxc.technology/'</msg>
+<status status="PASS" endtime="20170719 06:21:39.830" starttime="20170719 06:21:24.400"></status>
+</kw>
+<status status="PASS" endtime="20170719 06:21:39.830" critical="yes" starttime="20170719 06:21:24.399"></status>
+</test>
+<status status="PASS" endtime="20170719 06:21:39.832" starttime="20170719 06:21:04.360"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="2">Critical Tests</stat>
+<stat fail="0" pass="2">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="DXC1" pass="2">DXC1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

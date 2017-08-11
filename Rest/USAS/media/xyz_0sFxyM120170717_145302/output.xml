@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20170717 14:53:03.152" generator="Robot 3.0.2 (Python 2.7.12 on linux2)">
+<suite source="/home/nexii/NUTAS/UI/USAS/media/xyz_0sFxyM1.txt" id="s1" name="xyz 0sFxyM1">
+<test id="s1-t1" name="User can create an account and log in">
+<kw name="Get Public Dns Name" library="Remote">
+<doc>To retrieve instance public ip</doc>
+<arguments>
+<arg>i-15948e9b</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20170717 14:53:07.204" level="INFO">{u'i-15948e9b': Instance:i-15948e9b}
+Got the message from your ec2 aws instance</msg>
+<msg timestamp="20170717 14:53:07.205" level="INFO">${result} = ec2-52-76-40-136.ap-southeast-1.compute.amazonaws.com</msg>
+<status status="PASS" endtime="20170717 14:53:07.205" starttime="20170717 14:53:06.683"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>'Wroking,Fine!'</arg>
+</arguments>
+<msg timestamp="20170717 14:53:07.205" level="INFO">'Wroking,Fine!'</msg>
+<status status="PASS" endtime="20170717 14:53:07.206" starttime="20170717 14:53:07.205"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${result}</arg>
+</arguments>
+<msg timestamp="20170717 14:53:07.206" level="INFO">ec2-52-76-40-136.ap-southeast-1.compute.amazonaws.com</msg>
+<status status="PASS" endtime="20170717 14:53:07.207" starttime="20170717 14:53:07.206"></status>
+</kw>
+<status status="PASS" endtime="20170717 14:53:07.207" critical="yes" starttime="20170717 14:53:06.682"></status>
+</test>
+<status status="PASS" endtime="20170717 14:53:07.208" starttime="20170717 14:53:03.153"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="xyz 0sFxyM1" pass="1">xyz 0sFxyM1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

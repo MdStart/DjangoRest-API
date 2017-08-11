@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20170718 06:06:02.973" generator="Robot 3.0.2 (Python 2.7.12 on linux2)">
+<suite source="/home/nexii/NUTAS/UI/USAS/media/concentrix.txt" id="s1" name="Concentrix">
+<test id="s1-t1" name="TestCase1">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>http://www.concentrix.com/</arg>
+<arg>ff</arg>
+</arguments>
+<msg timestamp="20170718 06:06:03.079" level="INFO">Opening browser 'ff' to base url 'http://www.concentrix.com/'</msg>
+<status status="PASS" endtime="20170718 06:06:13.056" starttime="20170718 06:06:03.079"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170718 06:06:13.191" starttime="20170718 06:06:13.056"></status>
+</kw>
+<status status="PASS" endtime="20170718 06:06:13.191" critical="yes" starttime="20170718 06:06:03.078"></status>
+</test>
+<test id="s1-t2" name="TestCase2">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>http://www.concentrix.com/</arg>
+<arg>ff</arg>
+</arguments>
+<msg timestamp="20170718 06:06:13.193" level="INFO">Opening browser 'ff' to base url 'http://www.concentrix.com/'</msg>
+<status status="PASS" endtime="20170718 06:06:22.791" starttime="20170718 06:06:13.193"></status>
+</kw>
+<status status="PASS" endtime="20170718 06:06:22.792" critical="yes" starttime="20170718 06:06:13.192"></status>
+</test>
+<status status="PASS" endtime="20170718 06:06:22.793" starttime="20170718 06:06:02.975"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="2">Critical Tests</stat>
+<stat fail="0" pass="2">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Concentrix" pass="2">Concentrix</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

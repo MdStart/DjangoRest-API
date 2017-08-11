@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20170717 15:13:03.979" generator="Robot 3.0.2 (Python 2.7.12 on linux2)">
+<suite source="/home/nexii/NUTAS/UI/USAS/media/xyz_HbIds9r.txt" id="s1" name="xyz HbIds9r">
+<test id="s1-t1" name="User can create an account and log in">
+<kw name="Get Public Dns Name" library="Remote">
+<doc>To retrieve instance public ip</doc>
+<arguments>
+<arg>i-15948e9b</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20170717 15:13:07.613" level="INFO">${result} = ec2-52-76-40-136.ap-southeast-1.compute.amazonaws.com</msg>
+<status status="PASS" endtime="20170717 15:13:07.613" starttime="20170717 15:13:07.515"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>'Wroking,Fine!'</arg>
+</arguments>
+<msg timestamp="20170717 15:13:07.613" level="INFO">'Wroking,Fine!'</msg>
+<status status="PASS" endtime="20170717 15:13:07.614" starttime="20170717 15:13:07.613"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${result}</arg>
+</arguments>
+<msg timestamp="20170717 15:13:07.614" level="INFO">ec2-52-76-40-136.ap-southeast-1.compute.amazonaws.com</msg>
+<status status="PASS" endtime="20170717 15:13:07.615" starttime="20170717 15:13:07.614"></status>
+</kw>
+<status status="PASS" endtime="20170717 15:13:07.615" critical="yes" starttime="20170717 15:13:07.514"></status>
+</test>
+<status status="PASS" endtime="20170717 15:13:07.615" starttime="20170717 15:13:03.981"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="xyz HbIds9r" pass="1">xyz HbIds9r</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

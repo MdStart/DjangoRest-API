@@ -1,0 +1,122 @@
+
+{% load staticfiles %}
+{% load i18n %}
+{% load crispy_forms_tags %}
+<div class="header navbar navbar-inverse ">
+ 
+<div class="navbar-inner">
+<div class="header-seperation text-center">
+<ul class="nav pull-left notifcation-center visible-xs visible-sm">
+<li class="dropdown">
+<a href="#main-menu" data-webarch="toggle-left-side">
+<i class="material-icons">menu</i>
+</a>
+</li>
+</ul>
+ 
+<a href="index.html">
+<img src="{% static 'assets/img/logo.png' %}" class="logo" alt="" data-src="{% static 'assets/img/logo.png' %}" data-src-retina="{% static 'assets/img/logo.png' %}" width="103" height="40"/>
+</a>
+</div>
+ 
+<div class="header-quick-nav">
+ 
+<div class="pull-left">
+<ul class="nav quick-section">
+<li class="quicklinks"> <a href="#" class="" id="layout-condensed-toggle">
+<i class="material-icons">menu</i>
+</a>
+</li>
+</ul>
+</div>
+
+ 
+ 
+<div class="pull-right">
+<div class="chat-toggler sm">
+<div class="profile-pic">
+<img src="{% static 'assets/img/profiles/avatar_small1.jpg' %}" alt="" data-src="{% static 'assets/img/profiles/avatar_small.jpg' %}" data-src-retina="{% static 'assets/img/profiles/avatar_small2x.jpg' %}" width="35" height="35"/>
+</div>
+</div>
+<ul class="nav quick-section ">
+<li class="quicklinks">
+<a data-toggle="dropdown" class="dropdown-toggle  pull-right " href="#" style="color:#000;">
+{{ user }} &nbsp;&nbsp;<i class="fa fa-sort-desc" style="color:#000 !important; font-size:16px;"></i>
+</a>
+<ul class="dropdown-menu  pull-right" role="menu" aria-labelledby="user-options">
+<li class="divider"></li>
+<li>
+{% if request.user.is_authenticated %}
+      <li><a href="{% url 'auth_logout' %}">Logout</a></li>
+  
+{% endif %}
+
+</li>
+</ul>
+</li>
+</ul>
+</div>
+ 
+</div>
+ 
+</div>
+ 
+</div>
+ 
+ 
+<div class="page-container row-fluid">
+ 
+<div class="page-sidebar " id="main-menu">
+ 
+<div class="page-sidebar-wrapper scrollbar-dynamic" id="main-menu-wrapper">
+<div class="user-info-wrapper">
+
+<div class="row"><div class="col-sm-8 col-sm-offset-4 m-b-20 text-center">
+<div class="profile-wrapper sm">
+<img src="{% static 'assets/img/profiles/avatar_small.jpg' %}" alt="" data-src="{% static 'assets/img/profiles/avatar_small.jpg' %}" data-src-retina="{% static 'assets/img/profiles/avatar_small.jpg' %}" width="69" height="69"/>
+</div>
+<div class="user-info sm">
+<i class="fa fa-edit"></i>
+</div>
+
+
+<div class="user-info sm" style="margin-left:-52px;">
+<div class="username" style="color:#fff; font-size:18px;">{{ user }}</div>
+<div class="status" style="color:#20C8EF;">Project manager</div>
+</div>
+
+
+</div>
+</div>
+</div>
+ 
+ 
+
+<ul>
+<li class="open active"> <a href="{% url 'dashbord' %}"><img src="{% static 'assets/img/icons/dashboard.png' %}"/> <span class="title">Dashboard</span></a></li>
+<li > <a href="{% url 'status_sort' 'C' %}"><img src="{% static 'assets/img/icons/test-activity.png' %}"/> <span class="title">Test Activity</span></a></li>
+<li> <a href="{% url 'add_records' %}"><img src="{% static 'assets/img/icons/test-suit-upload.png' %}"/> <span class="title">Test Suit Upload</span></a></li>
+<li> <a href="{% url 'testplan' %}"><img src="{% static 'assets/img/icons/schdule.png' %}"/> <span class="title">Test Planning</span></a></li>
+<li> <a href="{% url 'add_project' %}"><img src="{% static 'assets/img/icons/projects.png' %}"/> <span class="title">Add Project</span></a></li>
+<li> <a href="{% url 'testcase_addition' %}"><img src="{% static 'assets/img/icons/test-suit.png' %}"/> <span class="title">Add TestCase </span></a></li>
+<!-- <li> <a href="test-queue.html"><img src="{% static 'assets/img/icons/test-queue.png' %}"/> <span class="title">Test Queue</span></a></li> -->
+
+
+
+
+          {% if request.user.is_authenticated %}
+            <li><a href="{% url 'auth_logout' %}"><img src="{% static 'assets/img/icons/logout.png' %}"/> <span class="title">Logout</span></a></li>
+          {% else %}
+          <li><a href="{% url 'auth_login' %}""><img src="{% static 'assets/img/icons/logout.png' %}"/> <span class="title">Logout</span></a></li>
+          {% endif %}
+    
+
+
+
+<!-- li> <a href="signin.html"><img src="{% static 'assets/img/icons/logout.png' %}"/> <span class="title">Logout</span></a></li> -->
+</ul>
+
+
+ 
+</div>
+</div>

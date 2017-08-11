@@ -1,0 +1,17 @@
+{% if user.is_authenticated %}
+
+<ul class="nav nav-tabs navbar-left">
+            <li><a href="{% url 'status_sort' status='W' %}">Waiting</a></li>
+            <li><a href="{% url 'status_sort' status='T' %}">Testing</a></li>
+            <li><a href="{% url 'status_sort' status='C' %}">Completed</a></li>
+            <li><a href="{% url 'status_sort' status='E' %}">Error</a></li>
+ </ul>
+{% endif %}
+ <ul class="nav navbar-nav navbar-right">
+          {% if request.user.is_authenticated %}
+            <button class="btn btn-primary"><li><a href="{% url 'auth_logout' %}">Logout</a></li></button>
+            {% else %}
+            <button class="btn btn-primary"> <li><a href="{% url 'auth_login' %}">Login</a></li></button>
+            <button class="btn btn-primary"><li><a href="{% url 'registration_register' %}">Register</a></li></button>
+           {% endif %}
+</ul>

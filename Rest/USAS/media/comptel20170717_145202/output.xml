@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20170717 14:52:03.916" generator="Robot 3.0.2 (Python 2.7.12 on linux2)">
+<suite source="/home/nexii/NUTAS/UI/USAS/media/comptel.txt" id="s1" name="Comptel">
+<test id="s1-t1" name="TestCase1">
+<kw name="Open Browser">
+<arguments>
+<arg>http://www.comptel.com/</arg>
+<arg>ff</arg>
+</arguments>
+<msg timestamp="20170717 14:52:03.962" level="FAIL">No keyword with name 'Open Browser' found.</msg>
+<status status="FAIL" endtime="20170717 14:52:03.962" starttime="20170717 14:52:03.962"></status>
+</kw>
+<status status="FAIL" endtime="20170717 14:52:03.963" critical="yes" starttime="20170717 14:52:03.958">No keyword with name 'Open Browser' found.</status>
+</test>
+<test id="s1-t2" name="TestCase2">
+<kw name="Open Browser">
+<arguments>
+<arg>http://www.comptel.com/</arg>
+<arg>ff</arg>
+</arguments>
+<msg timestamp="20170717 14:52:03.966" level="FAIL">No keyword with name 'Open Browser' found.</msg>
+<status status="FAIL" endtime="20170717 14:52:03.967" starttime="20170717 14:52:03.966"></status>
+</kw>
+<status status="FAIL" endtime="20170717 14:52:03.967" critical="yes" starttime="20170717 14:52:03.963">No keyword with name 'Open Browser' found.</status>
+</test>
+<status status="FAIL" endtime="20170717 14:52:03.967" starttime="20170717 14:52:03.918"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="2" pass="0">Critical Tests</stat>
+<stat fail="2" pass="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="2" id="s1" name="Comptel" pass="0">Comptel</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20170717 14:52:03.958" level="ERROR">Error in file '/home/nexii/NUTAS/UI/USAS/media/comptel.txt': Importing test library 'Selenium2Library' failed: ImportError: No module named Selenium2Library
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  /home/nexii/.virtualenvs/venv1/bin
+  /home/nexii/.virtualenvs/venv1/lib/python2.7
+  /home/nexii/.virtualenvs/venv1/lib/python2.7/plat-x86_64-linux-gnu
+  /home/nexii/.virtualenvs/venv1/lib/python2.7/lib-tk
+  /home/nexii/.virtualenvs/venv1/lib/python2.7/lib-old
+  /home/nexii/.virtualenvs/venv1/lib/python2.7/lib-dynload
+  /usr/lib/python2.7
+  /usr/lib/python2.7/plat-x86_64-linux-gnu
+  /usr/lib/python2.7/lib-tk
+  /home/nexii/.virtualenvs/venv1/local/lib/python2.7/site-packages
+  /home/nexii/.virtualenvs/venv1/lib/python2.7/site-packages</msg>
+</errors>
+</robot>

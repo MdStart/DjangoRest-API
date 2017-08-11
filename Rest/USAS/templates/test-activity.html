@@ -1,0 +1,159 @@
+{% load staticfiles %}
+{% load i18n %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
+<meta charset="utf-8"/>
+<title>USAS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<meta content="" name="description"/>
+<meta content="" name="author"/>
+
+<link href="{% static 'assets/plugins/font-awesome/css/font-awesome.css' %}" rel="stylesheet" type="text/css"/>
+<link href="{% static 'assets/plugins/bootstrap-select2/select2.css' %}" rel="stylesheet" type="text/css" media="screen"/>
+<link href="{% static 'assets/plugins/jquery-datatable/css/jquery.dataTables.css' %}" rel="stylesheet" type="text/css"/>
+<link href="{% static 'assets/plugins/datatables-responsive/css/datatables.responsive.css' %}" rel="stylesheet" type="text/css" media="screen"/>
+ 
+<link href="{% static 'assets/plugins/bootstrapv3/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css"/>
+<link href="{% static 'assets/plugins/bootstrapv3/css/bootstrap-theme.min.css' %}" rel="stylesheet" type="text/css"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="{% static 'assets/plugins/animate.min.css' %}" rel="stylesheet" type="text/css"/>
+<link href="{% static 'assets/plugins/jquery-scrollbar/jquery.scrollbar.css' %}" rel="stylesheet" type="text/css"/>
+ 
+ 
+<link href="{% static 'css/webarch.css' %}" rel="stylesheet" type="text/css"/>
+ <style>
+ thead{
+	 background-color:#0267BA;
+	 color:#FFF;
+	 }
+ </style>
+</head>
+
+ 
+<body class="">
+ 
+{% include 'dashboard.html' %}
+
+<div class="page-content">
+<div class="content">
+<div class="page-title">
+<h3><span class="semi-bold">Test Activity</span></h3>
+</div>
+
+<div class="row-fluid">
+<div class="span12">
+<div class="grid simple ">
+<div class="grid-title">
+<h4><img src="{% static 'assets/img/icons/test-activity-hover.png' %}"/> <span class="semi-bold">Test Activity</span></h4>
+</div>
+<div>
+  <ul class="nav nav-tabs" style="color:green;">
+            <li><a href="{% url 'status_sort' status='W' %}">Waiting</a></li>
+            <li><a href="{% url 'status_sort' status='T' %}">Testing</a></li>
+            <li><a href="{% url 'status_sort' status='C' %}">Completed</a></li>
+            <li><a href="{% url 'status_sort' status='E' %}">Error</a></li>
+ </ul>
+</div>
+<div class="grid-body ">
+<!-- <div class="col-md-3" style="float:right;"><div class="col-md-12" style="padding-left:0px;">
+<div class="col-md-2" style="padding-top:5px; float:left;"><i class="fa fa-filter"></i></div>
+<div class="col-md-10" style="float:right; padding-left:0px;">
+<div class="form-group">
+<div class=" right">
+<select class="form-control select2" data-init-plugin="select2" required>
+<option value="">Sort by Status</option>
+<option value="1">Status1</option>
+<option value="2">Status2</option>
+</select>
+</div>
+</div>
+</div></div>
+</div> -->
+<table class="table table-striped" id="example2">
+<thead>
+<tr>
+	<th>Testrun ID</th>
+	<th>User</th>
+	<th>Project</th>
+	<th>Testsuit ID</th>
+        <th>Environment</th>
+	<th>Log Path</th>
+	<th>Status</th>
+	<th>Result</th>
+  <th>&nbsp;</th>
+</tr>
+</thead>
+{% for status in test_by_status %}
+    <tr> 
+      <td> {{ status.test_run_id|upper }}</td>
+      <td>{{ status.user|upper }}</td>
+      <td>{{ status.project|upper }}</td>
+      <td>{{ status.test_suit_id|upper }}</td>
+      <td>{{ status.envt|upper }}</td>
+      {% if status.status == "c" %}
+          <td><a href={{ status.log_path }}>executionlog</a></td>
+      {% else %}
+          <td></td>
+      {% endif %}
+      <td>{{ status.get_status_display }}</td>
+      <td>{{ status.result|upper }}</td>
+      <td><button><a href="{% url 'runtest' status.id %}">ReRun</a></button></td>
+    </tr>  
+    {% endfor %}
+  </tbody>
+</table>
+<div class="pagination" class="col-sm-6 col-sm-offset-3">
+        <span class="step-links">
+            {% if test_by_status.has_previous %}
+                <button type="button" class="btn btn-success">
+                <a href="?page={{ test_by_status.previous_page_number }}">Previous</a>
+                </button>             
+            {% endif %}
+
+            <span class="current">
+                Page {{ test_by_status.number }} of {{ test_by_status.paginator.num_pages }}.
+            </span>
+
+            {% if test_by_status.has_next %}
+                <button type="button" class="btn btn-success"> 
+                <a href="?page={{ test_by_status.next_page_number }}">Next</a>
+                </button>
+            {% endif %}
+        </span>
+    </div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+ 
+<script src="{% static 'assets/plugins/jquery/jquery-1.11.3.min.js' %}" type="text/javascript"></script>
+<script src="{% static 'assets/plugins/bootstrapv3/js/bootstrap.min.js' %}" type="text/javascript"></script>
+<script src="{% static 'assets/plugins/jquery-block-ui/jqueryblockui.min.js' %}" type="text/javascript"></script>
+<script src="{% static 'assets/plugins/jquery-unveil/jquery.unveil.min.js' %}" type="text/javascript"></script>
+<script src="{% static 'assets/plugins/jquery-scrollbar/jquery.scrollbar.min.js' %}" type="text/javascript"></script>
+<script src="{% static 'assets/plugins/jquery-numberAnimate/jquery.animateNumbers.js' %}" type="text/javascript"></script>
+<script src="{% static 'assets/plugins/jquery-validation/js/jquery.validate.min.js' %}" type="text/javascript"></script>
+<script src="{% static 'assets/plugins/bootstrap-select2/select2.min.js' %}" type="text/javascript"></script>
+ 
+ 
+<script src="{% static 'js/webarch.js' %}" type="text/javascript"></script>
+<script src="{% static 'assets/js/chat.js' %}" type="text/javascript"></script>
+ 
+ 
+<script src="{% static 'assets/plugins/bootstrap-select2/select2.min.js' %}" type="text/javascript"></script>
+<script src="{% static 'assets/plugins/jquery-datatable/js/jquery.dataTables.min.js' %}" type="text/javascript"></script>
+<script src="{% static 'assets/plugins/jquery-datatable/extra/js/dataTables.tableTools.min.js' %}" type="text/javascript"></script>
+<script type="text/javascript" src="{% static 'assets/plugins/datatables-responsive/js/datatables.responsive.js' %}"></script>
+<script type="text/javascript" src="{% static 'assets/plugins/datatables-responsive/js/lodash.min.js' %}"></script>
+ 
+<script src="{% static 'assets/js/datatables.js' %}" type="text/javascript"></script>
+ 
+</body>
+</html>

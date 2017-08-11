@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load i18n %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+	<div class="error-body no-top" style="background-image:url({% static 'assets/img/login-bg.jpg' %}); background-repeat:no-repeat; background-size:cover; width:100%; height:100%; background-color:#0751BD;">
+	 <div class="container">
+
+	<div class="row login-container">
+	<div class="col-md-6 col-md-offset-1"><img src="{% static 'assets/img/tool-icon.png' %}" style="margin-top:25%;"/></div>
+	<div class="col-md-4">
+	<div class="row">
+	<div class="col-md-12 text-center m-b-20">
+	<img src="{% static 'assets/img/usas-logo.png' %}"/>
+	</div>
+	<div class="col-md-12" style="background-color:#cdd3e0; padding:40px;">
+	 <form method="post" action="" class="login-form validate" id="login-form"  name="login-form">
+	  {% csrf_token %}
+	  {{ form|crispy }}
+
+	  <input class='btn btn-block btn-primary' type="submit" value="{% trans 'Submit' %}" />
+	  <input type="hidden" name="next" value="{{ next }}" />
+	</form>
+	</div>
+
+	</div>
+	<hr/>
+	<div class='row'>
+	<div class='col-sm-6 col-sm-offset-3 text-align-center'>
+	<p>{% trans "Forgot password" %}? <a href="{% url 'auth_password_reset' %}">{% trans "Reset it" %}</a>!</p>
+	<p>{% trans "Not member" %}? <a href="{% url 'registration_register' %}">{% trans "Register" %}</a>!</p>
+	</div>
+	</div>
+	 </div>
+	 </div>
+	 </div>
+	 </div>
+ {% endblock %}
+

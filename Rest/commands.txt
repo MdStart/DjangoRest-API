@@ -1,0 +1,12 @@
+http  -f  -a nexii:rajneesh post http://localhost:8000/testrequests/  user=1 project=1 test_suit_id=ts-07 test_file@C:\Users\nexii\xyz.txt
+
+#Curl 
+
+# curl post request 
+curl  -X POST -u nexii:rajneesh   -F user=1 -F project=1 -F test_suit_id=ts-07 -F test
+_file=@C:\Users\nexii\xyz.txt http://localhost:8000/testrequests/
+
+
+
+{"url":"http://localhost:8000/testrequests/8/","id":8,"user":1,"project":1,"test_suit_id":"ts-07","test_file":"http://localhost:8000/media/x
+yz_6Z8Iu4A.txt"}

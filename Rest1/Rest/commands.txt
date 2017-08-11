@@ -1,0 +1,1 @@
+http  -f  -a nexii:rajneesh post http://localhost:8000/testrequest/  user=1 project=1 test_suit_id=ts-06 test_file@C:\Users\nexii\xyz.txt

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<ul>
+	{% for p in project %}
+	<p>{{ p.project }}</p>
+	<li>
+	 {% for ts in p.test_case.all  %}
+	 	<p>---> {{ ts.project.name  }} {{ ts.test_case }}</p>
+	 {% endfor %}
+	</li>
+	{% endfor %}
+</ul>
+</body>
+</html>

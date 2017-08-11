@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load i18n %}
+
+{% block content %}
+
+<div class="error-body no-top" style="background-image:url({% static 'assets/img/login-bg.jpg' %}); background-repeat:no-repeat; background-size:cover; width:100%; height:100%; background-color:#0751BD;">
+	 <div class="container">
+
+	<div class="row login-container">
+	<div class="col-md-6 col-md-offset-1"><img src="{% static 'assets/img/tool-icon.png' %}" style="margin-top:25%;"/></div>
+	<div class="col-md-4">
+	<div class="row">
+	<div class="col-md-12 text-center m-b-20">
+	<img src="{% static 'assets/img/usas-logo.png' %}"/>
+	</div>
+
+<p class='text-align-center lead' style="color: pink;">You have successfully logged out.</p>
+<button class="btn btn-primary "><a href="{% url 'auth_login' %}" style="color: #FF0000;font-size: 100%;">Login</a></button>
+
+{% endblock %}
+

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20170718 07:01:03.025" generator="Robot 3.0.2 (Python 2.7.12 on linux2)">
+<suite source="/home/nexii/NUTAS/UI/USAS/media/concentrix_bNpu3j4.txt" id="s1" name="concentrix bNpu3j4">
+<test id="s1-t1" name="TestCase1">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>http://www.concentrix.com/</arg>
+<arg>ff</arg>
+</arguments>
+<msg timestamp="20170718 07:01:03.153" level="INFO">Opening browser 'ff' to base url 'http://www.concentrix.com/'</msg>
+<status status="PASS" endtime="20170718 07:01:12.451" starttime="20170718 07:01:03.153"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170718 07:01:12.623" starttime="20170718 07:01:12.451"></status>
+</kw>
+<status status="PASS" endtime="20170718 07:01:12.623" critical="yes" starttime="20170718 07:01:03.152"></status>
+</test>
+<test id="s1-t2" name="TestCase2">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>http://www.concentrix.com/</arg>
+<arg>ff</arg>
+</arguments>
+<msg timestamp="20170718 07:01:12.628" level="INFO">Opening browser 'ff' to base url 'http://www.concentrix.com/'</msg>
+<status status="PASS" endtime="20170718 07:01:22.377" starttime="20170718 07:01:12.628"></status>
+</kw>
+<status status="PASS" endtime="20170718 07:01:22.377" critical="yes" starttime="20170718 07:01:12.627"></status>
+</test>
+<test id="s1-t3" name="TestCase3">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>http://www.nexiilabs.com/</arg>
+<arg>ff</arg>
+</arguments>
+<msg timestamp="20170718 07:01:22.380" level="INFO">Opening browser 'ff' to base url 'http://www.nexiilabs.com/'</msg>
+<status status="PASS" endtime="20170718 07:01:30.551" starttime="20170718 07:01:22.379"></status>
+</kw>
+<status status="PASS" endtime="20170718 07:01:30.552" critical="yes" starttime="20170718 07:01:22.378"></status>
+</test>
+<status status="PASS" endtime="20170718 07:01:30.553" starttime="20170718 07:01:03.027"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="3">Critical Tests</stat>
+<stat fail="0" pass="3">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="concentrix bNpu3j4" pass="3">concentrix bNpu3j4</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

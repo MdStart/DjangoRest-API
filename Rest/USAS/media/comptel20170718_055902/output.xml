@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20170718 05:59:04.174" generator="Robot 3.0.2 (Python 2.7.12 on linux2)">
+<suite source="/home/nexii/NUTAS/UI/USAS/media/comptel.robot" id="s1" name="Comptel">
+<test id="s1-t1" name="TestCase1">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>http://www.comptel.com/</arg>
+<arg>ff</arg>
+</arguments>
+<msg timestamp="20170718 05:59:04.716" level="INFO">Opening browser 'ff' to base url 'http://www.comptel.com/'</msg>
+<status status="PASS" endtime="20170718 05:59:20.298" starttime="20170718 05:59:04.715"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170718 05:59:20.800" starttime="20170718 05:59:20.298"></status>
+</kw>
+<status status="PASS" endtime="20170718 05:59:20.800" critical="yes" starttime="20170718 05:59:04.714"></status>
+</test>
+<test id="s1-t2" name="TestCase2">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>http://www.comptel.com/</arg>
+<arg>ff</arg>
+</arguments>
+<msg timestamp="20170718 05:59:20.803" level="INFO">Opening browser 'ff' to base url 'http://www.comptel.com/'</msg>
+<status status="PASS" endtime="20170718 05:59:31.997" starttime="20170718 05:59:20.802"></status>
+</kw>
+<status status="PASS" endtime="20170718 05:59:31.997" critical="yes" starttime="20170718 05:59:20.801"></status>
+</test>
+<status status="PASS" endtime="20170718 05:59:31.998" starttime="20170718 05:59:04.177"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="2">Critical Tests</stat>
+<stat fail="0" pass="2">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Comptel" pass="2">Comptel</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
